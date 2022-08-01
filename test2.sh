@@ -6,13 +6,12 @@ read no
 i=1
 ans=0
 
-for i in 1 2 3 4 5 .. no
+for (( i=1; i<x; i++ ))
 do
 	if [[ $(( no%i )) -eq 0 ]]
 	then
 		ans=$(( ans+i ))
 fi
-i='expr $i+1'
 done
 
 if [ $no -eq $ans ]
